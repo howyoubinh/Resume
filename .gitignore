@@ -267,4 +267,4 @@ TSWLatexianTemp*
 *.sta
 
 # Makeindex log files
-*.lpz
+*.lpz.DS_Store
