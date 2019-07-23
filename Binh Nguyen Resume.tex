@@ -1,5 +1,41 @@
 \documentclass{article}
 
+
+\usepackage{titlesec}{\LARGE\bfseries}
+\usepackage{titling}
+\usepackage[margin=1in]{geometry}
+
+\titleformat{\section}
+{\huge\bfseries\lowercase}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\Large}
+{$\bullet$}
+{0em}
+{}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}
+
+\renewcommand{\maketitle}{
+\begin{center}
+{\huge\bfseries
+\theauthor}
+
+\vspace{.25em}
+
+binhtnguyen95@gmail.com --- github.com/howyoubinh
+
+\end{center}
+}
+% Document starts here %
+
 \begin{document}
 
 \title{R\'esum\'e}
@@ -13,7 +49,7 @@
 
 \subsubsection{Programming}
 
-Python, C, C++, Matlab, Javascript
+Python, C, C++, Matlab, Javascript, Hello
 
 \subsubsection{Markup}
 
