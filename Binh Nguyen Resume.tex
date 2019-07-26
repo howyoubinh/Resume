@@ -1,19 +1,23 @@
 \documentclass{article}
 
+\input{glyphtounicode}
+\pdfgentounicode=1
+
 
 \usepackage{titlesec}{\LARGE\bfseries}
 \usepackage{titling}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1.25in]{geometry}
+\usepackage[utf8]{inputenc}
 
 \titleformat{\section}
-{\huge\bfseries\lowercase}
+{\huge}
 {}
 {0em}
-{}[\titlerule]
+{\bfseries}[\titlerule]
 
 \titleformat{\subsection}
 {\bfseries\Large}
-{$\bullet$}
+{}
 {0em}
 {}
 
@@ -21,20 +25,37 @@
 {\bfseries}
 {}
 {0em}
-{}
+{}[---]
+
+\titlespacing{\subsubsection}
+{0em}{.25em}{0em}
 
 \renewcommand{\maketitle}{
 \begin{center}
 {\huge\bfseries
 \theauthor}
 
-\vspace{.25em}
+\vspace{0.25em}
 
-binhtnguyen95@gmail.com --- github.com/howyoubinh
+$binhtnguyen95@gmail.com \thinspace\vert\thinspace
+linkedin.com/in/binh$-$t$-$nguyen \thinspace\vert\thinspace 
+github.com/howyoubinh \thinspace\vert\thinspace 
+209.406.6378$
 
 \end{center}
 }
-% Document starts here %
+
+% Binh Nguyen Resume
+% Compiled with LaTeX
+% Updated 07/24/2019
+
+% Git repo: https://github.com/howyoubinh/Resume
+
+% To-dos:
+% 	1. Add to preamble: \input{glyphtounicode}
+%						\pdfgentounicode=1
+
+%%%%%%%% Document starts here %%%%%%%%
 
 \begin{document}
 
@@ -43,21 +64,47 @@ binhtnguyen95@gmail.com --- github.com/howyoubinh
 
 \maketitle
 
-\section{Skills}
+\section{Education}
 
-\subsection{Languages}
+University of California, San Diego -
+Major: B.S. Bioengineering,
+Minor: Cognitive Science
+
+\section{Coursework}
+Data Analysis, 
+Machine Learning,
+Statistics \& Probability,
+Numerical Analysis, 
+Data Structures,
+Algorithms,
+Analog Design,
+Circuits \& Systems,
+Signal Processing,
+Bioinstrumentation,
+Biomedical Optics,
+Biomechanics,
+Human Physiology
+
+\section{Skills}
 
 \subsubsection{Programming}
 
-Python, C, C++, Matlab, Javascript, Hello
+Python, C, C++, Matlab, Javascript, SQL, UNIX, Shell, Git, LabVIEW, Simulink
 
 \subsubsection{Markup}
 
 {\LaTeX}, HTML, CSS
 
-\section{Education}
+\subsubsection{Libraries}
+NumPy, Pandas, Keras, Scikit-learn, TensorFlow, Jupyter, Django
+
+\subsubsection{Hardware}
+Raspberry Pi, Arduino, PCB, Solder, ECG
 
 \section{Experience}
+
+\subsection{Acutus Medical, Inc.}
+Clinical Science Engineer Intern
 
 \section{Projects}
 
