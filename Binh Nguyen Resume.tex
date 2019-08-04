@@ -1,111 +1,136 @@
-\documentclass{article}
-
-\input{glyphtounicode}
-\pdfgentounicode=1
-
-
-\usepackage{titlesec}{\LARGE\bfseries}
-\usepackage{titling}
-\usepackage[margin=1.25in]{geometry}
-\usepackage[utf8]{inputenc}
-
-\titleformat{\section}
-{\huge}
-{}
-{0em}
-{\bfseries}[\titlerule]
-
-\titleformat{\subsection}
-{\bfseries\Large}
-{}
-{0em}
-{}
-
-\titleformat{\subsubsection}[runin]
-{\bfseries}
-{}
-{0em}
-{}[---]
-
-\titlespacing{\subsubsection}
-{0em}{.25em}{0em}
-
-\renewcommand{\maketitle}{
-\begin{center}
-{\huge\bfseries
-\theauthor}
-
-\vspace{0.25em}
-
-$binhtnguyen95@gmail.com \thinspace\vert\thinspace
-linkedin.com/in/binh$-$t$-$nguyen \thinspace\vert\thinspace 
-github.com/howyoubinh \thinspace\vert\thinspace 
-209.406.6378$
-
-\end{center}
-}
-
 % Binh Nguyen Resume
 % Compiled with LaTeX
 % Updated 07/24/2019
 
 % Git repo: https://github.com/howyoubinh/Resume
 
-% To-dos:
-% 	1. Add to preamble: \input{glyphtounicode}
-%						\pdfgentounicode=1
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[margin=1in]{geometry}
+    \usepackage{titlesec}
+    \usepackage{titling}
+    \usepackage[utf8]{inputenc}
+    \usepackage{verbatim}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
 
-%%%%%%%% Document starts here %%%%%%%%
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \Large{#1} }
+    \vspace*{-6pt} 
+    \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\vspace*{-40pt}
 
-\title{R\'esum\'e}
-\author{Binh Nguyen}
+    
 
-\maketitle
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Binh Nguyen}}\\
+	binhtnguyen95@gmail.com $\cdot$ 209.406.6378 $\cdot$ linkedin.com/in/binh-t-nguyen $\cdot$ github.com/howyoubinh\\
+\end{center}
 
-\section{Education}
+%==== Education ====%
+\header{Education}
+\textbf{University of California, San Diego}\hfill La Jolla, CA\\
+B.S. Bioengineering \hfill  - 2018\\
+\vspace{2mm}
 
-University of California, San Diego -
-Major: B.S. Bioengineering,
-Minor: Cognitive Science
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
 
-\section{Coursework}
-Data Analysis, 
-Machine Learning,
-Statistics \& Probability,
-Numerical Analysis, 
-Data Structures,
-Algorithms,
-Analog Design,
-Circuits \& Systems,
-Signal Processing,
-Bioinstrumentation,
-Biomedical Optics,
-Biomechanics,
-Human Physiology
+\textbf{Acutus Medical, Inc.} \hfill Carlsbad, CA\\
+\textit{Clinical Science Engineer Intern} \hfill July 2018 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Lead development of a segmentation algorithm for dividing left atrium into 8 distinct spatial regions based on user-selected vertices in Matlab for use as a clinical research tool
+	\item Build, train, and test an RNN-LSTM model on over 3 datasets consisting of 200K+ datapoints for detecting disturbances and noise in ECG localization
+	\item Create Matlab script to visualize propagation of conduction velocity vectors and repetitive activation patterns on 3D reconstructed anatomy
+	\item Improve ECG signal approximation and catheter localization algorithm by retraining weights on significant channels using amplitude-based thresholding
+	\item Automate the retrieval, parsing, and organization of data from animal studies and clinical trials
+\end{itemize}
 
-\section{Skills}
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming: & Python, Matlab, C  \\
+	Libraries:   & NumPy, Pandas         \\
+	Hardware:    & Raspberry Pi, Arduino \\
+\end{tabular}
+\vspace{2mm}
 
-\subsubsection{Programming}
+\header{Projects}
+{\textbf{Neural Network-controlled Drone via Voice Recognition}} {\sl scikit-learn, TensorFlow} \hfill [link to project]\\
+• Design and construct quadcopter drone from the ground-up using open-source hardware and software tools • Implement Raspberry Pi for processing audio input and computing on-board voice recognition tasks • Achieve \textasciitilde{}90\% accuracy for correct verbal phrases using k-fold cross-validation methods via scikit-learn and TensorFlow\\
+\vspace*{2mm}
+{\textbf{Arduino-powered LED Pacemaker}}\\
+Design ECG circuit with variable resistors, capacitors, op-amps, and electrodes to measure voltage and detect heart beats • Program an Arduino Mega 2560 to compute heart rate and emit a different color LED based on the type of heart rhythm\\
+\vspace*{2mm}
 
-Python, C, C++, Matlab, Javascript, SQL, UNIX, Shell, Git, LabVIEW, Simulink
 
-\subsubsection{Markup}
 
-{\LaTeX}, HTML, CSS
-
-\subsubsection{Libraries}
-NumPy, Pandas, Keras, Scikit-learn, TensorFlow, Jupyter, Django
-
-\subsubsection{Hardware}
-Raspberry Pi, Arduino, PCB, Solder, ECG
-
-\section{Experience}
-
-\subsection{Acutus Medical, Inc.}
-Clinical Science Engineer Intern
-
-\section{Projects}
-
+\ 
 \end{document}
