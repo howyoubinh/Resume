@@ -10,12 +10,21 @@
     \usepackage{amssymb}
     \usepackage{textcomp}
     \usepackage[utf8]{inputenc}
+    %\usepackage[rm,light]{roboto} % roboto light
+    %\usepackage[sfdefault]{ClearSans} % Clear Sans
     \usepackage[T1]{fontenc}
-    \usepackage[margin=1in]{geometry}
+    \usepackage[margin=0.75in]{geometry}
     \usepackage{titlesec}
     \usepackage{titling}
-    \usepackage[utf8]{inputenc}
     \usepackage{verbatim}
+    \usepackage{hyperref}
+    \usepackage{xcolor}
+    \hypersetup{
+    	     colorlinks,
+    	     linkcolor={red!50!black},
+    	     citecolor={blue!50!black},
+    	     urlcolor={blue!80!black}
+    	     }
     \textheight=10in
     \pagestyle{empty}
     \raggedright
@@ -90,13 +99,26 @@
 \vspace*{-10pt}
 \begin{center}
 	{\Huge \scshape {Binh Nguyen}}\\
-	binhtnguyen95@gmail.com $\cdot$ 209.406.6378 $\cdot$ linkedin.com/in/binh-t-nguyen $\cdot$ github.com/howyoubinh\\
+	\href{mailto:binhtnguyen95@gmail.com}{binhtnguyen95@gmail.com} $\cdot$ 
+	209.406.6378 $\cdot$ 
+	\href{https://www.linkedin.com/in/binh-t-nguyen}{linkedin.com/in/binh-t-nguyen} $\cdot$ 
+	\href{https://www.github.com/howyoubinh}{github.com/howyoubinh}\\
 \end{center}
 
 %==== Education ====%
 \header{Education}
 \textbf{University of California, San Diego}\hfill La Jolla, CA\\
-B.S. Bioengineering \hfill  - 2018\\
+B.S. Bioengineering, Minor: Cognitive Science \hfill 2018\\
+\vspace{2mm}
+
+%==== Skills ====%
+\header{Skills}
+\begin{tabular}{ l l }
+\hspace{-1mm}
+	Programming: & Python, Matlab, C, JavaScript, SQL, UNIX, Shell, Git, LabVIEW, Simulink  \\
+	Libraries:   & NumPy, Pandas, Scikit-learn, Jupyter, TensorFlow, Keras, Django         \\
+	Hardware:    & Raspberry Pi, Arduino, PCG, Soldering, ECG \\
+\end{tabular}
 \vspace{2mm}
 
 %==== Experience ====%
@@ -104,9 +126,9 @@ B.S. Bioengineering \hfill  - 2018\\
 \vspace{1mm}
 
 \textbf{Acutus Medical, Inc.} \hfill Carlsbad, CA\\
-\textit{Clinical Science Engineer Intern} \hfill July 2018 | Present\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
+\textit{Clinical Science Engineer Intern} \hfill July 2018 --- Present\\
+\vspace{-2mm}
+\begin{itemize} \itemsep 0.1pt
 	\item Lead development of a segmentation algorithm for dividing left atrium into 8 distinct spatial regions based on user-selected vertices in Matlab for use as a clinical research tool
 	\item Build, train, and test an RNN-LSTM model on over 3 datasets consisting of 200K+ datapoints for detecting disturbances and noise in ECG localization
 	\item Create Matlab script to visualize propagation of conduction velocity vectors and repetitive activation patterns on 3D reconstructed anatomy
@@ -114,23 +136,59 @@ B.S. Bioengineering \hfill  - 2018\\
 	\item Automate the retrieval, parsing, and organization of data from animal studies and clinical trials
 \end{itemize}
 
-\header{Skills}
+\vspace{-2mm}
+
+\textbf{Cartilage Tissue Engineering Lab, UCSD} \hfill La Jolla, CA\\
+\textit{Undergraduate Researcher} \hfill June 2017 --- August 2017\\
+\vspace{-2mm}
+\begin{itemize} \itemsep 0.1pt
+	\item Develop an algorithm for comparing correctly-identified cells in automated program against the gold standard to validate feasibility and reduce labor-intensive tasks
+	\item Reconstruct 3D tissue images from 2D cross-sectional images using Digital Volumetric Imaging from multi-GB struct data types in Matlab
+	\item Collaborate with Master’s and PhD students to implement 2D and 3D cell segmentation techniques involving adaptive thresholding and pixel intensities
+	\item Present research findings at the UCSD Summer Research Conference
+\end{itemize}
+
+\vspace{-2mm}
+
+\textit{Lab Assistant} \hfill August 2016 --- April 2018\\
+\vspace{-2mm}
+\begin{itemize} \itemsep 0.1pt
+	\item Scan, process, and organize micro-computed tomography images to record experiments in Excel and online database
+	\item Assist with tissue culture generation, dissection, buffer-making, and staining for various research experiments
+	\item Check, maintain, and service lab equipment to increase productivity and prevent downtime
+	\item Write, conduct, and update SOPs, ensuring up-to-date guidelines for lab-wide tasks Projects
+\end{itemize}
+\vspace{2mm}
+
+%==== Projects ====%
+\header{Projects}
+\textbf{Neural Network-controlled Drone via Voice Recognition} \hfill 2018
+\vspace{-2mm}
+\begin{itemize} \itemsep 0.1pt
+	\item Design and construct quadcopter drone from the ground-up using open-source hardware and software tools
+	\item Achieve 90\% accuracy for correct verbal phrases using k-fold cross-validation methods via scikit-learn and TensorFlow
+\end{itemize}
+
+\textbf{Arduino-powered LED Pacemaker} \hfill 2017
+\vspace{-2mm}
+\begin{itemize} \itemsep 0.1pt
+	\item Design ECG circuit with variable resistors, capacitors, op-amps, and electrodes to measure voltage and detect heart beats
+	\item Program an Arduino Mega 2560 to compute heart rate and emit a different color LED based on the type of heart rhythm
+\end{itemize}
+\vspace*{2mm}
+
+%==== Coursework ====%
+\header{Coursework}
 \begin{tabular}{ l l }
-	Programming: & Python, Matlab, C  \\
-	Libraries:   & NumPy, Pandas         \\
-	Hardware:    & Raspberry Pi, Arduino \\
+	Data Analysis, Machine Learning, Statistics and Probability, Data Structures, Algorithms \\
+	Numerical Analysis, Analog Design, Circuits and Systems, Signal Processing, \\
+	Bioinstrumentation,
+	Biomedical Optics, Biomechanics, Human Physiology
 \end{tabular}
 \vspace{2mm}
 
-\header{Projects}
-{\textbf{Neural Network-controlled Drone via Voice Recognition}} {\sl scikit-learn, TensorFlow} \hfill [link to project]\\
-• Design and construct quadcopter drone from the ground-up using open-source hardware and software tools • Implement Raspberry Pi for processing audio input and computing on-board voice recognition tasks • Achieve \textasciitilde{}90\% accuracy for correct verbal phrases using k-fold cross-validation methods via scikit-learn and TensorFlow\\
-\vspace*{2mm}
-{\textbf{Arduino-powered LED Pacemaker}}\\
-Design ECG circuit with variable resistors, capacitors, op-amps, and electrodes to measure voltage and detect heart beats • Program an Arduino Mega 2560 to compute heart rate and emit a different color LED based on the type of heart rhythm\\
-\vspace*{2mm}
-
-
-
+%==== Interests ====%
+\header{Interests}
+Game development, Music production, Cooking, Lifting, Hiking, Meeting new people
 \ 
 \end{document}
