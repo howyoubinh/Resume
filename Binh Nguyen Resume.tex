@@ -4,7 +4,7 @@
 
 % Git repo: https://github.com/howyoubinh/Resume
 
-\documentclass[a4paper]{article}
+\documentclass{article}
     \usepackage{fullpage}
     \usepackage{amsmath}
     \usepackage{amssymb}
@@ -12,7 +12,7 @@
     \usepackage[utf8]{inputenc}
     %\usepackage[rm,light]{roboto} % roboto light
     %\usepackage[sfdefault]{ClearSans} % Clear Sans
-    \usepackage[T1]{fontenc}
+    %\usepackage[T1]{fontenc}
     \usepackage[margin=0.75in]{geometry}
     \usepackage{titlesec}
     \usepackage{titling}
@@ -32,10 +32,16 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 
+\setlength{\parskip}{0pt}
+\raggedbottom
+\addtolength{\topmargin}{-4mm}
+
     %\renewcommand{\encodingdefault}{cg}
 %\renewcommand{\rmdefault}{lgrcmr}
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -96,7 +102,7 @@
     
 
 %==== Profile ====%
-\vspace*{-10pt}
+%\vspace*{-10pt}
 \begin{center}
 	{\Huge \scshape {Binh Nguyen}}\\
 	\href{mailto:binhtnguyen95@gmail.com}{binhtnguyen95@gmail.com} $\cdot$ 
@@ -113,79 +119,81 @@ B.S. Bioengineering: BioSystems, Minor: Cognitive Science \hfill 2018\\
 
 %==== Skills ====%
 \header{Skills}
+\vspace{1mm}
 \begin{tabular}{ l l }
-\hspace{-1mm}
+%\hspace{-1mm}
 	Programming: & Python, Matlab, C, JavaScript, SQL, UNIX, Shell, Git, \LaTeX \\
 	Libraries:   & NumPy, Pandas, Scikit-learn, Jupyter, TensorFlow, Keras, Django \\
 	Systems/Hardware:    & LabVIEW, Simulink, Raspberry Pi, Arduino, PCB, Soldering, ECG \\
 \end{tabular}
-\vspace{2mm}
+%\vspace{2mm}
 
 %==== Experience ====%
 \header{Experience}
-\vspace{1mm}
+%\vspace{1mm}
 
 \textbf{Acutus Medical, Inc.} \hfill Carlsbad, CA\\
 \textit{Clinical Science Engineer Intern} \hfill July 2018 --- Present\\
 \vspace{-2mm}
-\begin{itemize} \itemsep 0.1pt
+\begin{itemize} \itemsep 0.05pt
 	\item Lead development of a segmentation algorithm for dividing left atrium into 8 distinct spatial regions based on user-selected vertices in Matlab for use as a clinical research tool
-	\item Build, train, and test an RNN-LSTM model on over 3 datasets consisting of 200K+ datapoints for detecting disturbances and noise in ECG localization
-	\item Create Matlab script to visualize propagation of conduction velocity vectors and repetitive activation patterns on 3D reconstructed anatomy
+	\item Build, train, and test an RNN-LSTM model on multiple datasets consisting of 200K+ datapoints for detecting disturbances and noise in ECG localization
+	\item Create Matlab script to visualize propagation of conduction velocity vectors and repetitive activation patterns to identify arrhythmic patterns
 	\item Improve ECG signal approximation and catheter localization algorithm by retraining weights on significant channels using amplitude-based thresholding
 	\item Automate the retrieval, parsing, and organization of data from animal studies and clinical trials
 \end{itemize}
 
-\vspace{-2mm}
+%\vspace{-2mm}
 
 \textbf{Cartilage Tissue Engineering Lab, UCSD} \hfill La Jolla, CA\\
 \textit{Undergraduate Researcher} \hfill June 2017 --- August 2017\\
 \vspace{-2mm}
-\begin{itemize} \itemsep 0.1pt
-	\item Develop an algorithm for comparing correctly-identified cells in automated program against the gold standard to validate feasibility and reduce labor-intensive tasks
-	\item Reconstruct 3D tissue images from 2D cross-sectional images using Digital Volumetric Imaging from multi-GB struct data types in Matlab
-	\item Collaborate with Master’s and PhD students to implement 2D and 3D cell segmentation techniques involving adaptive thresholding and pixel intensities
-	\item Present research findings at the UCSD Summer Research Conference
+\begin{itemize} \itemsep 0.05pt
+	\item Developed an algorithm for comparing correctly-identified cells in automated program against the gold standard to validate feasibility and reduce labor-intensive tasks
+	\item Reconstructed 3D tissue images from 2D cross-sectional images using Digital Volumetric Imaging from multi-GB struct data types in Matlab
+	\item Collaborateed with Master’s and PhD students to implement 2D and 3D cell segmentation techniques involving adaptive thresholding and pixel intensities
+	\item Presented research findings at the UCSD Summer Research Conference
 \end{itemize}
 
-\vspace{-2mm}
+%\vspace{-2mm}
 
 \textit{Lab Assistant} \hfill August 2016 --- April 2018\\
 \vspace{-2mm}
-\begin{itemize} \itemsep 0.1pt
-	\item Scan, process, and organize micro-computed tomography images to record experiments in Excel and online database
-	\item Assist with tissue culture generation, dissection, buffer-making, and staining for research experiments
-	\item Check, maintain, and service lab equipment to increase productivity and prevent downtime
-	\item Write, conduct, and update SOPs, ensuring up-to-date guidelines for lab-wide tasks
+\begin{itemize} \itemsep 0.05pt
+	\item Scanned, processed, and organized microCT images in local filesystem and server database
+	\item Assisted with tissue culture generation, dissection, buffer-making, and staining for research experiments
+	\item Checked, maintained, and serviced lab equipment to increase productivity and prevent downtime
+	\item Wrote, conducted, and updated SOPs, ensuring up-to-date guidelines for lab-wide tasks
 \end{itemize}
-\vspace{2mm}
+%\vspace{2mm}
 
 %==== Projects ====%
 \header{Projects}
 \textbf{Neural Network-controlled Drone via Voice Recognition} \hfill 2018
 \vspace{-2mm}
-\begin{itemize} \itemsep 0.1pt
-	\item Design and construct quadcopter drone from the ground-up using open-source hardware and software tools
-	\item Achieve 90\% accuracy in audio classification using k-fold cross-validation methods via scikit-learn and TensorFlow
+\begin{itemize} \itemsep 0.05pt
+	\item Constructed DJI Flamewheel drone using DIY kit and interfaced with DroneKit Python API
+	\item Achieved 90\% accuracy in audio recognition using k-fold cross-validation methods via scikit-learn/TensorFlow
 \end{itemize}
 
 \textbf{Arduino-powered LED Pacemaker} \hfill 2017
 \vspace{-2mm}
-\begin{itemize} \itemsep 0.1pt
-	\item Design ECG circuit with variable resistors, capacitors, op-amps, and electrodes to measure voltage and detect heart beats
-	\item Program an Arduino Mega 2560 to calculate heart rate and emit a different color LED based on the type of heart rhythm
+\begin{itemize} \itemsep 0.05pt
+	\item Designed ECG circuit with variable components to measure voltage and detect heart beats
+	\item Programmed an Arduino Mega to calculate heart rate and emit a different color LED based on the arrhythmia
 \end{itemize}
-\vspace*{2mm}
+%\vspace{2mm}
 
 %==== Coursework ====%
 \header{Coursework}
+\vspace{1mm}
 \begin{tabular}{ l l }
 	Data Analysis, Machine Learning, Statistics and Probability, Data Structures, Algorithms \\
 	Numerical Analysis, Analog Design, Circuits and Systems, Signal Processing, \\
 	Bioinstrumentation,
 	Biomedical Optics, Biomechanics, Human Physiology
 \end{tabular}
-\vspace{2mm}
+%\vspace{2mm}
 
 %==== Interests ====%
 \header{Interests}
