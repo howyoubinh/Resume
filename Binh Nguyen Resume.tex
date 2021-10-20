@@ -13,12 +13,23 @@
     %\usepackage[rm,light]{roboto} % roboto light
     %\usepackage[sfdefault]{ClearSans} % Clear Sans
     %\usepackage[T1]{fontenc}
+%    \usepackage[margin=1in]{geometry}
     \usepackage[margin=0.75in]{geometry}
     \usepackage{titlesec}
     \usepackage{titling}
     \usepackage{verbatim}
     \usepackage{hyperref}
     \usepackage{xcolor}
+% for UMichigan (start)
+%    \usepackage{lipsum}
+%    \usepackage{fancyhdr}
+%    \usepackage[headheight=65pt,tmargin=65pt,headsep=20pt]{geometry}
+
+
+%    \newcommand{\tmpx}{}
+%    \newcommand\tmp[1]{\renewcommand{\tmpx}{#1}}
+%    \fancypagestyle{sec}{\lhead{\tmpx}}
+% for UMichigan (end)
     \hypersetup{
     	     colorlinks,
     	     linkcolor={red!50!black},
@@ -34,13 +45,27 @@
 
 \setlength{\parskip}{0pt}
 \raggedbottom
-\addtolength{\topmargin}{-4mm}
+%\addtolength{\topmargin}{-4mm}
 
     %\renewcommand{\encodingdefault}{cg}
 %\renewcommand{\rmdefault}{lgrcmr}
 
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+%\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
+
+%\documentclass{article} 
+%\usepackage[margin=1in]{geometry}
+
+% set margins to 1 inch
+%\setlength\topmargin{0pt}
+%\addtolength\topmargin{-\headheight}
+%\addtolength\topmargin{-\headsep}
+%\setlength\oddsidemargin{0pt}
+%\setlength\textwidth{\paperwidth}
+%\addtolength\textwidth{-2in}
+%\setlength\textheight{\paperheight}
+%\addtolength\textheight{-2in}
+%\usepackage{layout}
 
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
@@ -93,14 +118,21 @@
     #4 \\
 }
 
+
 % !TeX spellcheck = en_US 
 
 % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
-\vspace*{-40pt}
+    
 
-  
+\begin{document}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\renewcommand{\headrulewidth}{0pt}
+%\lhead{Curriculum Vitae/Resume \\ Binh Nguyen \\ Biomedical Engineering M.S. \\ 65375374}
+
+\vspace*{-50pt}
+
 
 %==== Profile ====%
 %\vspace*{-10pt}
@@ -139,20 +171,22 @@ B.S. Bioengineering: BioSystems, Minor: Cognitive Science \hfill 2018\\
 \textit{R\&D Systems Engineer} \hfill August 2019 --- Present\\
 \vspace{-2mm}
 \begin{itemize} \itemsep 0.05pt
-	\item Developed pace detection algorithm to correct auxiliary catheter positions in 3D localization engine
-	\item Constructed and trained an RNN-LSTM model in Python to predict and detect disturbance in clinical data
-	\item Implemented a real-time QRS detection method for optimizing impedance-based localization of catheters
-	\item Established template-matching method to compensate for anomalous respiration cycles
-	\item Coordinated with hardware, firmware, and software teams to execute R\&D verification and validation testing
+	\item Built prototyping tools to integrate magnetic tracking capability for next-gen systems
+	\item Developed MATLAB application for reading and monitoring real-time UDP data
+	\item Constructed and trained an RNN-LSTM model in Python to detect disturbances in IQ signals
+	\item Implemented a real-time QRS detection method to optimize impedance-based localization of catheters
+	\item Established template-matching methodology to classify and compensate for anomalous respiration cycles
+	\item Standardized production systems using data-driven insights and reduced number of complaint reports
+	\item Coordinated with firmware, software, and quality teams to execute R\&D verification and validation testing
 \end{itemize}
 
 \textit{Clinical Science Engineer Intern} \hfill July 2018 --- August 2019\\
 \vspace{-2mm}
 \begin{itemize} \itemsep 0.05pt
-	\item Developed an algorithm for segmenting left atrium into distinct spatial regions for clinical research
-	\item Created MATLAB visualization of conduction velocity vectors to identify localization of arrhythmic patterns
-	\item Analyzed ECG signal using multi-modal methods to improve signal fidelity and localization accuracy
-	\item Automated the retrieval, parsing, and organization of data from animal studies and clinical trials
+	\item Developed an algorithm to automatically segment heart anatomy into spatial regions for clinical research
+	\item Created MATLAB visualization of conduction velocity vectors to identify repetitive arrhythmic patterns
+	\item Automated the retrieval, parsing, and organization of binary data from animal studies and clinical trials
+	\item Optimized ECG signal using multi-modal methods to improve signal-to-noise ratio
 \end{itemize}
 
 %\vspace{-2mm}
@@ -173,9 +207,7 @@ B.S. Bioengineering: BioSystems, Minor: Cognitive Science \hfill 2018\\
 \vspace{-2mm}
 \begin{itemize} \itemsep 0.05pt
 	\item Assisted with tissue culture generation, dissection, and staining for research experiments
-	\item Scanned, processed, and organized micro-CT images in local file system and server database
-	\item Inspected, maintained, and serviced lab equipment as required for regulatory compliance
-	\item Conducted and revised Standard Operating Procedures for various lab tasks
+	\item Processed and analyzed micro-CT images of bovine cartilage samples
 \end{itemize}
 %\vspace{2mm}
 
@@ -202,13 +234,13 @@ B.S. Bioengineering: BioSystems, Minor: Cognitive Science \hfill 2018\\
 \header{Coursework}
 \vspace{1mm}
 \begin{tabular}{ l l }
-	Data Analysis, Machine Learning, Statistics and Probability, Data Structures, Algorithms \\
-	Numerical Analysis, Analog Design, Circuits and Systems, Signal Processing, \\
+	Python for Data Analysis, Machine Learning, Statistics and Probability, Data Structures, Algorithms \\
+	Numerical Analysis, Analog Design, Circuits and Systems, Signal Processing \\
 	Bioinstrumentation, Biomedical Optics, Biomechanics, Human Physiology
 \end{tabular}
 \vspace{5mm}
 
 %==== Interests ====%
 \header{Interests}
-Neuroscience, Brain-machine interface, Human-computer interaction, Electrophysiology, Virtual/Augmented reality
+Data engineering, Human-computer interaction, Electrophysiology, Virtual/Augmented reality
 \end{document}
